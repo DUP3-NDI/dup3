@@ -17,11 +17,6 @@ function setText(){
   texte.innerHTML = "NOOOOOOO!!!"
 }
 
-function switchHidden(){
-  var bg = document.getElementById("particles-js");
-  bg.style.visibility = "visible";
-}
-
 function mouseup(e){
   document.removeEventListener("mousemove", move);
   if (isOverlapping(pc,pb)){
@@ -31,10 +26,9 @@ function mouseup(e){
     pc.removeEventListener("mousedown",mousedown);
     setTimeout(function(){
       light();
-      pc.style.left = "200px";
-      pc.style.top = "150px";
+      pc.style.left = "80%";
+      pc.style.top = "50%";
     }, 2000);
-    switchHidden();
   }
 }
 function dark() {

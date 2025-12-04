@@ -1,7 +1,9 @@
 body{
-    background-image: url("assets/banana.webp");
+    background-image: url("assets/bg.gif");
+    height: 100%;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:contain;
 }
 #pc_image {
     position: fixed;
@@ -9,8 +11,8 @@ body{
 
 #pb_image {
     position: absolute;
-    left : 500px;
-    top : 500px;
+    left : 80%;
+    top : 50%;
 }
 #darken {
     position: fixed;
