@@ -12,16 +12,23 @@ function mousedown(e){
   document.addEventListener("mouseup", mouseup);
 }
 
+function setText(){
+  var texte = document.getElementById("No");
+  texte.innerHTML = "NOOOOOOO!!!"
+}
+
 function mouseup(e){
   document.removeEventListener("mousemove", move);
   if (isOverlapping(pc,pb)){
     console.log("ddd")
     dark();
+    setText()
+
+    pc.removeEventListener("mousedown",mousedown);
     setTimeout(function(){
       light();
       pc.style.left = "200px";
       pc.style.top = "150px";
-      pc.removeEventListener("mousedown",mousedown);
     }, 2000);
   }
 }
