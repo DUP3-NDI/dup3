@@ -57,4 +57,4 @@ function move(e){
     image.style.top = newY + "px";
 }
 
-console.log("je marche bien");
+console.log("je marche très bien");

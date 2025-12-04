@@ -1,9 +1,10 @@
 h1 {
-  color: navy;
+  color: white;
   text-align: center;
 }
 
 #No {
+  color: lightcoral;
     text-align: center;
     font-size: 100px;
     bottom: 50%;
