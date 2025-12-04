@@ -8,4 +8,6 @@ h1 {
     text-align: center;
     font-size: 100px;
     bottom: 50%;
+    position: relative;
+    z-index: 10000;
 }

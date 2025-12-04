@@ -14,7 +14,7 @@ function mousedown(e){
 
 function setText(){
   var texte = document.getElementById("No");
-  texte.innerHTML = "NOOOOOOO!!!"
+  texte.innerHTML = "NON!!! Vous pouvez sûrement le reconditionner en modifiant certains composants."
 }
 
 function mouseup(e){
