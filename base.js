@@ -17,11 +17,11 @@ function mouseup(e){
   if (isOverlapping(pc,pb)){
     console.log("ddd")
     dark();
+    pc.removeEventListener("mousedown",mousedown);
     setTimeout(function(){
       light();
       pc.style.left = "200px";
       pc.style.top = "150px";
-      pc.removeEventListener("mousedown",mousedown);
     }, 2000);
   }
 }
