@@ -1,48 +1,147 @@
 var pc = document.getElementById("pc_image");
-var image = pc;
 var pb = document.getElementById("pb_image");
-light()
+var tot = 0;
+const ts1 = document.getElementById("transparent-square1");
+const ts2 = document.getElementById("transparent-square2");
+const ts3 = document.getElementById("transparent-square3");
+
+const pcButtonsContainer = document.getElementById("pc-buttons");
+const pcButtons = document.querySelectorAll(".pc-btn");
+
+const container = document.getElementById("imagesContainer");
+const container2 = document.getElementById("imagesContainer2");
+const container3 = document.getElementById("imagesContainer3");
+
+const images = document.querySelectorAll(".motherboard-image");
+
+light();
+
+// empêcher le vrai drag du navigateur
 pc.addEventListener("dragstart", e => e.preventDefault());
-pc.addEventListener("mousedown", e => e.preventDefault());
 pc.addEventListener("mousedown", mousedown);
 
 function mousedown(e){
-  console.log("je suis dans down");
   document.addEventListener("mousemove", move);
   document.addEventListener("mouseup", mouseup);
 }
 
-function setText(){
-  var texte = document.getElementById("No");
-  texte.innerHTML = "NOOOOOOO!!!"
-}
-
-function switchHidden(){
-  var bg = document.getElementById("particles-js");
-  bg.style.visibility = "visible";
-}
-
 function mouseup(e){
   document.removeEventListener("mousemove", move);
+
   if (isOverlapping(pc,pb)){
-    console.log("ddd")
     dark();
-    setText()
-    pc.removeEventListener("mousedown",mousedown);
-    setTimeout(function(){
+    document.getElementById("No").innerHTML = "NOOOOOOO!!!";
+
+    // on désactive le drag
+    pc.removeEventListener("mousedown", mousedown);
+
+    setTimeout(() => {
       light();
-      pc.style.left = "200px";
-      pc.style.top = "150px";
+
+      // recentrer PC
+      pc.style.left = "50%";
+      pc.style.top = "50%";
+      pc.style.transform = "translate(-50%, -50%)";
+      pb.style.visibility = "hidden";
+
+      // afficher les boutons sur le PC
+      pcButtonsContainer.style.display = "flex";
+  pcButtons[0].addEventListener("click", (e) => {
+      showMotherboards(e.target.dataset.mb, e.target);
+  }, {once:true});
+
+  pcButtons[1].addEventListener("click", (e) => {
+      ShowRam(e.target.dataset.mb, e.target);
+  }, {once:true}); 
+
+  pcButtons[2].addEventListener("click", (e) => {
+      showSsd(e.target.dataset.mb, e.target);
+  }, {once:true}); 
+
+      // afficher tes transparents
+      ts2.style.top = "50%";
+      ts3.style.top = "60%";
+
     }, 2000);
-    switchHidden();
+
+    document.getElementById("particles-js").style.visibility = "visible";
   }
 }
+
+function showMotherboards(slot, button){
+    // Afficher le bon container selon le slot
+    const containers = {
+        "1": document.getElementById("imagesContainer"),
+        "2": document.getElementById("imagesContainer2"),
+        "3": document.getElementById("imagesContainer3")
+    };
+    Object.values(containers).forEach(c => c.style.display = "none");
+    const currentContainer = containers[slot];
+    currentContainer.style.display = "flex";
+
+    // Ajouter un listener au bouton pour le clic final
+    currentContainer.addEventListener("click", () => {
+        button.classList.add("used"); 
+        tot=tot+1;
+        if (tot === 3){
+          dark()
+        }
+        currentContainer.style.display = "none";
+        button.disabled = true;
+    }, {once:true});
+
+  }
+function ShowRam(slot, button){
+    // Afficher le bon container selon le slot
+    const containers = {
+        "1": document.getElementById("imagesContainer"),
+        "2": document.getElementById("imagesContainer2"),
+        "3": document.getElementById("imagesContainer3")
+    };
+    Object.values(containers).forEach(c => c.style.display = "none");
+    const currentContainer = containers[slot];
+    currentContainer.style.display = "flex";
+
+    // Ajouter un listener au bouton pour le clic final
+    currentContainer.addEventListener("click", () => {
+        button.classList.add("used"); 
+        tot=tot+1;
+        if (tot === 3){
+          dark()
+        }
+        currentContainer.style.display = "none";
+        button.disabled = true;
+    }, {once:true});}
+
+function showSsd(slot, button){
+    const containers = {
+        "1": document.getElementById("imagesContainer"),
+        "2": document.getElementById("imagesContainer2"),
+        "3": document.getElementById("imagesContainer3")
+    };
+    Object.values(containers).forEach(c => c.style.display = "none");
+    const currentContainer = containers[slot];
+    currentContainer.style.display = "flex";
+
+    // Ajouter un listener au bouton pour le clic final
+    currentContainer.addEventListener("click", () => {
+        button.classList.add("used"); 
+        tot=tot+1;
+        if (tot === 3){
+          dark()
+        }
+        currentContainer.style.display = "none";
+        button.disabled = true;
+    }, {once:true});
+  }
+
 function dark() {
     document.getElementById("darken").style.display = "block";
 }
 function light() {
     document.getElementById("darken").style.display = "none";
 }
+
 function isOverlapping(el1, el2) {
     const r1 = el1.getBoundingClientRect();
     const r2 = el2.getBoundingClientRect();
@@ -56,11 +155,7 @@ function isOverlapping(el1, el2) {
 function move(e){
     const w = pc.offsetWidth / 2;
     const h = pc.offsetHeight / 2;
-    var newX = e.clientX -w;
-    var newY = e.clientY -h;
 
-    image.style.left = newX + "px";
-    image.style.top = newY + "px";
+    pc.style.left = (e.clientX - w) + "px";
+    pc.style.top = (e.clientY - h) + "px";
 }
-
-console.log("je marche bien");
