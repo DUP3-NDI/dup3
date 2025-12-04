@@ -1,4 +1,5 @@
 var pc = document.getElementById("pc_image");
+var etat = 0
 var image = pc;
 var pb = document.getElementById("pb_image");
 light()
@@ -7,7 +8,6 @@ pc.addEventListener("mousedown", e => e.preventDefault());
 pc.addEventListener("mousedown", mousedown);
 
 function mousedown(e){
-  console.log("je suis dans down");
   document.addEventListener("mousemove", move);
   document.addEventListener("mouseup", mouseup);
 }
@@ -19,10 +19,10 @@ function setText(){
 
 function mouseup(e){
   document.removeEventListener("mousemove", move);
-  if (isOverlapping(pc,pb)){
-    console.log("ddd")
+  if (isOverlapping(pc,pb) && etat == 0){
     dark();
     setText()
+    etat = 1;
     pc.removeEventListener("mousedown",mousedown);
     setTimeout(function(){
       light();
