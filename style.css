@@ -12,7 +12,16 @@ body{
 #pc_image {
     position: fixed;
 }
+#hidden{
+    visibility:hidden;
+    width: 100px;
+    height: 100px;
+    transform: translate(+999%, -50%);
+    position: relative;
+    top: 85vh;
+    left: 80vh;
 
+}
 #pb_image {
     position: absolute;
     visibility:visible;

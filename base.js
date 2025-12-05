@@ -3,6 +3,7 @@ var etat = 0
 var image = pc;
 pc.style.height = '200px';
 pc.style.width = '200px'
+var bd = document.getElementById("bornedarcade");
 
 var pb = document.getElementById("pb_image");
 var tot = 0;
@@ -24,7 +25,9 @@ light();
 // empêcher le vrai drag du navigateur
 pc.addEventListener("dragstart", e => e.preventDefault());
 pc.addEventListener("mousedown", mousedown);
-
+bd.addEventListener("click", (e) => {
+  window.location.pathname = "/snake"; 
+  }, )
 function mousedown(e){
   document.addEventListener("mousemove", move);
   document.addEventListener("mouseup", mouseup);
