@@ -5,6 +5,9 @@ pc.style.height = '200px';
 pc.style.width = '200px'
 var pb = document.getElementById("pb_image");
 var tot = 0;
+var etat1 =0;
+var etat2 =0;
+var etat3 = 0;
 
 const pcButtonsContainer = document.getElementById("pc-buttons");
 const pcButtons = document.querySelectorAll(".pc-btn");
@@ -67,15 +70,15 @@ function mouseup(e){
       pcButtonsContainer.style.display = "flex";
   pcButtons[0].addEventListener("click", (e) => {
       showMotherboards(e.target.dataset.mb, e.target);
-  }, {once:true});
+  }, )
 
   pcButtons[1].addEventListener("click", (e) => {
       showSsd(e.target.dataset.mb, e.target);
-  }, {once:true}); 
+  }, )
 
   pcButtons[2].addEventListener("click", (e) => {
       showRam(e.target.dataset.mb, e.target);
-  }, {once:true}); 
+  }, )
   
     var texte = document.getElementById("No");
     texte.style.visibility = "hidden";
@@ -99,8 +102,7 @@ function showMotherboards(slot, button){
     // Ajouter un listener au bouton pour le clic final
       currentContainerlist[0].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
-        tot=tot+1;
-        if (tot === 3){
+        if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
@@ -108,11 +110,11 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
+        etat1 = 1;
     }, {once:true});
       currentContainerlist[1].addEventListener("click", () => {
         button.classList.add("usedtrue"); 
-        tot=tot+1;
-        if (tot === 3){
+        if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
@@ -120,11 +122,12 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
+        etat1 = 1;
             }, {once:true});
       currentContainerlist[2].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
         tot=tot+1;
-        if (tot === 3){
+        if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
@@ -132,6 +135,7 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
+        etat1 = 1;
     }, {once:true});
 
   }
@@ -150,8 +154,7 @@ function showMotherboards(slot, button){
     // Ajouter un listener au bouton pour le clic final
       currentContainerlist[0].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
-        tot=tot+1;
-        if (tot === 3){
+        if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
@@ -159,11 +162,11 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
+        etat2 = 1;
     }, {once:true});
       currentContainerlist[1].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
-        tot=tot+1;
-        if (tot === 3){
+        if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
@@ -171,11 +174,11 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
+        etat2 = 1;
             }, {once:true});
       currentContainerlist[2].addEventListener("click", () => {
         button.classList.add("usedtrue"); 
-        tot=tot+1;
-        if (tot === 3){
+        if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
@@ -183,6 +186,7 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
+        etat2 = 1;
     }, {once:true});
 
   }
@@ -201,9 +205,8 @@ function showRam(slot, button){
 
     // Ajouter un listener au bouton pour le clic final
     currentContainerlist[0].addEventListener("click", () => {
-        button.classList.add("usedfalse"); 
-        tot=tot+1;
-        if (tot === 3){
+        button.classList.add("usedfalse");
+        if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
@@ -211,11 +214,11 @@ function showRam(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
+        etat3 = 1;
     }, {once:true});
         currentContainerlist[1].addEventListener("click", () => {
         button.classList.add("usedtrue"); 
-        tot=tot+1;
-        if (tot === 3){
+        if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
@@ -223,11 +226,11 @@ function showRam(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
+        etat3 = 1;
     }, {once:true});
         currentContainerlist[2].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
-        tot=tot+1;
-        if (tot === 3){
+        if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
@@ -235,6 +238,7 @@ function showRam(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
+        etat3 = 1;
     }, {once:true});
   }
 
