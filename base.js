@@ -1,5 +1,6 @@
 var pc = document.getElementById("pc_image");
 var etat = 0
+var etatbis = 0
 var image = pc;
 pc.style.height = '200px';
 pc.style.width = '200px'
@@ -31,6 +32,13 @@ bd.addEventListener("click", (e) => {
 function mousedown(e){
   document.addEventListener("mousemove", move);
   document.addEventListener("mouseup", mouseup);
+  if (etatbis == 0){const buttons_install = document.getElementsByClassName("card");
+  Array.from(buttons_install).forEach(
+    elem => {
+    elem.addEventListener("click", () => success(elem), { once: true });
+  });
+  etatbis = 1
+  }
 }
 
 function setNoText(){
@@ -277,4 +285,17 @@ function move(e){
     pc.style.top = (e.clientY - h) + "px";
 }
 
+function success(e){
+  if (e == null){
+    return;
+  }
+  if (e.getElementsByClassName("title").innerHTML == "Windows 11"){
+    return;
+  }
+  Array.from(document.getElementsByClassName("card")).forEach(
+  elem => {
+  setVisibility(elem, false);
+  });
+  console.log("TOUT MARCHE OUIIII")
+}
 console.log("je marche très bien");
