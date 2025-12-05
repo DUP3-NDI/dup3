@@ -32,7 +32,33 @@ body{
     z-index: 9999;
 }
 
+#pc-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+}
+.pc-btn {
+    position: absolute;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 8px;
+}
 
+#btn-mb {
+    top: 370px;
+    left: 150px;;}
+#btn-ssd {    top: 320px;
+    left: 340px;}
+#btn-ram { top: 150px;
+    left: 200px; }
+
+.pc-btn.usedfalse {
+    position: absolute;
+
+}
 .pc-btn.usedfalse {
     background-color: red;
     color: white;
@@ -58,16 +84,38 @@ body{
 .pc-btn {
     cursor: pointer;
 }
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 0,
+        0 200px,
+        300px 200px,
+        300px 400px,
+        0 400px,
+        0 0
+    );
+}
 
 .motherboard-image, .ram-image, .ssd-image
 {
-    width: 100px;
+    display: flex;
+    align-items: center;   
+    width: 150px;
     cursor: pointer;
     justify-content:center;
 }
 
 #imagesContainer, #imagesContainer2, #imagesContainer3 {
     display: flex;
+    justify-content:center;
+    align-items: center;   
     gap: 40px;
     flex-wrap: wrap;
 }

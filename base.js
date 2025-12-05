@@ -4,6 +4,7 @@ var etatbis = 0
 var image = pc;
 pc.style.height = '200px';
 pc.style.width = '200px'
+
 var pb = document.getElementById("pb_image");
 var tot = 0;
 var etat1 =0;
@@ -71,7 +72,7 @@ function mouseup(e){
       pc.style.width = '500px'
       pc.style.left = "50%";
       pc.style.top = "50%";
-      pc.style.transform = "translate(-50%, -50%)";
+      pc.style.transform = "translate(-50%, -30%)";
       pb.style.visibility = "hidden";
 
       // afficher les boutons sur le PC
@@ -92,7 +93,7 @@ function mouseup(e){
     texte.style.visibility = "hidden";
 
       // afficher tes transparents
-    }, 2000);
+    }, 3200);
   }
 }
 
