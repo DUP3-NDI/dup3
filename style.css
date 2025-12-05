@@ -16,9 +16,9 @@ body{
     visibility:hidden;
     width: 100px;
     height: 100px;
-    transform: translate(+999%, -50%);
+    transform: translate(+999%, -20%);
     position: relative;
-    top: 85vh;
+    top: 75vh;
     left: 80vh;
 }
 #pb_image {
