@@ -41,7 +41,14 @@ body{
     left: 1%;
 
 }
-.pc-btn.used {
+
+.pc-btn.usedfalse {
+    background-color: red;
+    color: white;
+    cursor: not-allowed;
+}
+
+.pc-btn.usedtrue {
     background-color: green;
     color: white;
     cursor: not-allowed;

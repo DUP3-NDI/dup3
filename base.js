@@ -24,20 +24,26 @@ function mousedown(e){
   document.addEventListener("mouseup", mouseup);
 }
 
-function setText(){
+function setNoText(){
   var texte = document.getElementById("No");
   texte.innerHTML = "NON!!! Vous pouvez sûrement le reconditionner en modifiant certains composants."
+}
+
+function updateText(){
+  var titre = document.getElementById("titre");
+  titre.innerHTML = "Maintenant, il faut remplacer les composants qui étaient défaillants par des composants qui ont un faible coût pour l'environnemenent"
 }
 
 function mouseup(e){
   document.removeEventListener("mousemove", move);
   if (isOverlapping(pc,pb) && etat == 0){
     dark();
-    setText()
+    setNoText()
     etat = 1;
     pc.removeEventListener("mousedown",mousedown);
     setTimeout(function(){
       light();
+      updateText();
 
       // recentrer PC
       pc.style.left = "50%";
@@ -77,10 +83,28 @@ function showMotherboards(slot, button){
     Object.values(containers).forEach(c => c.style.display = "none");
     const currentContainer = containers[slot];
     currentContainer.style.display = "flex";
-
+    const currentContainerlist = currentContainer.querySelectorAll(".motherboard-image");
     // Ajouter un listener au bouton pour le clic final
-    currentContainer.addEventListener("click", () => {
-        button.classList.add("used"); 
+      currentContainerlist[0].addEventListener("click", () => {
+        button.classList.add("usedfalse"); 
+        tot=tot+1;
+        if (tot === 3){
+          dark()
+        }
+        currentContainer.style.display = "none";
+        button.disabled = true;
+    }, {once:true});
+      currentContainerlist[1].addEventListener("click", () => {
+        button.classList.add("usedtrue"); 
+        tot=tot+1;
+        if (tot === 3){
+          dark()
+        }
+        currentContainer.style.display = "none";
+        button.disabled = true;
+            }, {once:true});
+      currentContainerlist[2].addEventListener("click", () => {
+        button.classList.add("usedfalse"); 
         tot=tot+1;
         if (tot === 3){
           dark()
