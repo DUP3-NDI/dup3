@@ -10,8 +10,8 @@
     visibility: hidden;
     position:absolute;
     z-index: 9999999999;
-    left:0;
-    top:0;
+    left:35vh;
+    top:20vh;
 }
 
 .card {

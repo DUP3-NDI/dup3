@@ -132,6 +132,58 @@ function showMotherboards(slot, button){
     }, {once:true});
 
   }
+
+  function showSsd(slot, button){
+    // Afficher le bon container selon le slot
+    const containers = {
+        "1": document.getElementById("imagesContainer"),
+        "2": document.getElementById("imagesContainer2"),
+        "3": document.getElementById("imagesContainer3")
+    };
+    Object.values(containers).forEach(c => c.style.display = "none");
+    const currentContainer = containers[slot];
+    currentContainer.style.display = "flex";
+    const currentContainerlist = currentContainer.querySelectorAll(".ssd-image");
+    // Ajouter un listener au bouton pour le clic final
+      currentContainerlist[0].addEventListener("click", () => {
+        button.classList.add("usedfalse"); 
+        tot=tot+1;
+        if (tot === 3){
+          dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
+        }
+        currentContainer.style.display = "none";
+        button.disabled = true;
+    }, {once:true});
+      currentContainerlist[1].addEventListener("click", () => {
+        button.classList.add("usedfalse"); 
+        tot=tot+1;
+        if (tot === 3){
+          dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
+        }
+        currentContainer.style.display = "none";
+        button.disabled = true;
+            }, {once:true});
+      currentContainerlist[2].addEventListener("click", () => {
+        button.classList.add("usedtrue"); 
+        tot=tot+1;
+        if (tot === 3){
+          dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
+        }
+        currentContainer.style.display = "none";
+        button.disabled = true;
+    }, {once:true});
+
+  }
+
 function showRam(slot, button){
     // Afficher le bon container selon le slot
     const containers = {
@@ -183,56 +235,6 @@ function showRam(slot, button){
     }, {once:true});
   }
 
-  function showSsd(slot, button){
-    // Afficher le bon container selon le slot
-    const containers = {
-        "1": document.getElementById("imagesContainer"),
-        "2": document.getElementById("imagesContainer2"),
-        "3": document.getElementById("imagesContainer3")
-    };
-    Object.values(containers).forEach(c => c.style.display = "none");
-    const currentContainer = containers[slot];
-    currentContainer.style.display = "flex";
-    const currentContainerlist = currentContainer.querySelectorAll(".ssd-image");
-    // Ajouter un listener au bouton pour le clic final
-      currentContainerlist[0].addEventListener("click", () => {
-        button.classList.add("usedfalse"); 
-        tot=tot+1;
-        if (tot === 3){
-          dark()
-          setVisibility(document.getElementById("cards"), true);
-          setVisibility(document.getElementById("pc-buttons"), false);
-          light()
-        }
-        currentContainer.style.display = "none";
-        button.disabled = true;
-    }, {once:true});
-      currentContainerlist[1].addEventListener("click", () => {
-        button.classList.add("usedtrue"); 
-        tot=tot+1;
-        if (tot === 3){
-          dark()
-          setVisibility(document.getElementById("cards"), true);
-          setVisibility(document.getElementById("pc-buttons"), false);
-          light()
-        }
-        currentContainer.style.display = "none";
-        button.disabled = true;
-            }, {once:true});
-      currentContainerlist[2].addEventListener("click", () => {
-        button.classList.add("usedfalse"); 
-        tot=tot+1;
-        if (tot === 3){
-          dark()
-          setVisibility(document.getElementById("cards"), true);
-          setVisibility(document.getElementById("pc-buttons"), false);
-          light()
-        }
-        currentContainer.style.display = "none";
-        button.disabled = true;
-    }, {once:true});
-
-  }
 
 function dark() {
     document.getElementById("darken").style.display = "block";
