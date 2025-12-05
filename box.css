@@ -56,7 +56,7 @@
 .OSButton {
   text-align: center;
   justify-content: center;
-  align-self: center;
+  align-self:flex-end;
   width: 80px;
   height: 40px;
 }
