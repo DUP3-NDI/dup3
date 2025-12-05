@@ -1,7 +1,12 @@
+html{
+    height: 100%;
+    width: 100%;
+}
 body{
-    background-image: url("assets/banana.webp");
+    background-image: url("assets/bg.gif");
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
 #pc_image {
     position: fixed;
@@ -14,6 +19,7 @@ body{
     left : 500px;
     top : 500px;
 }
+
 #darken {
     position: fixed;
     top: 0;

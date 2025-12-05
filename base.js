@@ -1,9 +1,8 @@
 var pc = document.getElementById("pc_image");
+var etat = 0
+var image = pc;
 var pb = document.getElementById("pb_image");
 var tot = 0;
-const ts1 = document.getElementById("transparent-square1");
-const ts2 = document.getElementById("transparent-square2");
-const ts3 = document.getElementById("transparent-square3");
 
 const pcButtonsContainer = document.getElementById("pc-buttons");
 const pcButtons = document.querySelectorAll(".pc-btn");
@@ -25,17 +24,19 @@ function mousedown(e){
   document.addEventListener("mouseup", mouseup);
 }
 
+function setText(){
+  var texte = document.getElementById("No");
+  texte.innerHTML = "NON!!! Vous pouvez sûrement le reconditionner en modifiant certains composants."
+}
+
 function mouseup(e){
   document.removeEventListener("mousemove", move);
-
-  if (isOverlapping(pc,pb)){
+  if (isOverlapping(pc,pb) && etat == 0){
     dark();
-    document.getElementById("No").innerHTML = "NOOOOOOO!!!";
-
-    // on désactive le drag
-    pc.removeEventListener("mousedown", mousedown);
-
-    setTimeout(() => {
+    setText()
+    etat = 1;
+    pc.removeEventListener("mousedown",mousedown);
+    setTimeout(function(){
       light();
 
       // recentrer PC
@@ -59,12 +60,7 @@ function mouseup(e){
   }, {once:true}); 
 
       // afficher tes transparents
-      ts2.style.top = "50%";
-      ts3.style.top = "60%";
-
     }, 2000);
-
-    document.getElementById("particles-js").style.visibility = "visible";
   }
 }
 
@@ -159,3 +155,5 @@ function move(e){
     pc.style.left = (e.clientX - w) + "px";
     pc.style.top = (e.clientY - h) + "px";
 }
+
+console.log("je marche très bien");
