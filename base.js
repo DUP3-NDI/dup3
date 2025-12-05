@@ -146,7 +146,7 @@ function showRam(slot, button){
 
     // Ajouter un listener au bouton pour le clic final
     currentContainerlist[0].addEventListener("click", () => {
-        button.classList.add("usedtrue"); 
+        button.classList.add("usedfalse"); 
         tot=tot+1;
         if (tot === 3){
           dark()
@@ -158,7 +158,7 @@ function showRam(slot, button){
         button.disabled = true;
     }, {once:true});
         currentContainerlist[1].addEventListener("click", () => {
-        button.classList.add("usedfalse"); 
+        button.classList.add("usedtrue"); 
         tot=tot+1;
         if (tot === 3){
           dark()
