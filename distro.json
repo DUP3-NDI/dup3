@@ -11,17 +11,17 @@
     },
     {
         "distro": "Debian",
-        "logo": "assets/distro/nird.png",
-        "description": "J'aime Debian."
+        "logo": "assets/distro/debian.png",
+        "description": "Debian est un système d'exploitation stable et sûr qui dispose d'une vaste prise en charge matérielle. Aussi Debian est la base de nombreuses autres distributions. Debian est aussi simple à installer."
     },
     {
-        "distro": "Une autre distro",
-        "logo": "assets/distro/nird.png",
-        "description": "A trouver."
+        "distro": "Batocera",
+        "logo": "assets/distro/batocera.png",
+        "description": "Batocera permet de jouer à des jeux d'anciennes consoles sur votre ordinateur. Il s'agit d'une distribution faite pour le rétrogaming. Cette distribution est plug and play et assure l'accessibilité de plusieurs plateformes tout en profitant du le confort d'une console."
     },
     {
         "distro": "Windows 11",
-        "logo": "assets/distro/nird.png",
-        "description": "Vous ne pouvez pas, votre ordinateur n'est pas assez récent"
+        "logo": "assets/distro/windows_11.png",
+        "description": "Vous ne pouvez pas, votre ordinateur n'est pas assez récent (vous ne possédez pas de puce tpm 2.0)."
     }
 ]
