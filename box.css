@@ -8,6 +8,8 @@
 
 #cards{
     visibility: hidden;
+    position:relative;
+    z-index: 9999999999;
 }
 
 .card {

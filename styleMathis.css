@@ -12,3 +12,16 @@ h1 {
     position: relative;
     z-index: 10000;
 }
+
+.wrapper {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#OSButton {
+  text-align: center;
+  justify-content: center;
+  visibility: hidden;
+}

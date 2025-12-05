@@ -99,6 +99,9 @@ function showMotherboards(slot, button){
         tot=tot+1;
         if (tot === 3){
           dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
         }
         currentContainer.style.display = "none";
         button.disabled = true;
@@ -108,6 +111,9 @@ function showMotherboards(slot, button){
         tot=tot+1;
         if (tot === 3){
           dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
         }
         currentContainer.style.display = "none";
         button.disabled = true;
@@ -117,6 +123,9 @@ function showMotherboards(slot, button){
         tot=tot+1;
         if (tot === 3){
           dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
         }
         currentContainer.style.display = "none";
         button.disabled = true;
@@ -191,6 +200,9 @@ function showRam(slot, button){
         tot=tot+1;
         if (tot === 3){
           dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
         }
         currentContainer.style.display = "none";
         button.disabled = true;
@@ -200,6 +212,9 @@ function showRam(slot, button){
         tot=tot+1;
         if (tot === 3){
           dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
         }
         currentContainer.style.display = "none";
         button.disabled = true;
@@ -209,6 +224,9 @@ function showRam(slot, button){
         tot=tot+1;
         if (tot === 3){
           dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
         }
         currentContainer.style.display = "none";
         button.disabled = true;
