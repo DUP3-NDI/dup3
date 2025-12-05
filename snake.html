@@ -133,21 +133,17 @@ function loop() {
   }
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
-  // draw snake one cell at a time
   context.fillStyle = 'yellow'
   snake.cells.forEach(function(cell, index) {
 
-    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
     context.fillRect(cell.x, cell.y, grid-1, grid-1);
 
-    // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
         if (goldenapple === true){
             snake.maxCells++;
         }
         goldenapple = false;
-      // canvas is 400x400 which is 25x25 grids
       let rand = getRandomInt(0,10);
       if (rand == 0){
         goldenapple = true;
@@ -156,10 +152,8 @@ function loop() {
       apple.y = getRandomInt(0, 25) * grid;
     }
 
-    // check collision with all cells after this one (modified bubble sort)
     for (var i = index + 1; i < snake.cells.length; i++) {
 
-      // snake occupies same space as a body part. reset game
       if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
         snake.x = 160;
         snake.y = 160;
@@ -175,36 +169,26 @@ function loop() {
   });
 }
 
-// listen to keyboard events to move the snake
 document.addEventListener('keydown', function(e) {
-  // prevent snake from backtracking on itself by checking that it's
-  // not already moving on the same axis (pressing left while moving
-  // left won't do anything, and pressing right while moving left
-  // shouldn't let you collide with your own body)
 
-  // left arrow key
   if (e.which === 37 && snake.dx === 0) {
     snake.dx = -grid;
     snake.dy = 0;
   }
-  // up arrow key
   else if (e.which === 38 && snake.dy === 0) {
     snake.dy = -grid;
     snake.dx = 0;
   }
-  // right arrow key
   else if (e.which === 39 && snake.dx === 0) {
     snake.dx = grid;
     snake.dy = 0;
   }
-  // down arrow key
   else if (e.which === 40 && snake.dy === 0) {
     snake.dy = grid;
     snake.dx = 0;
   }
 });
 
-// start the game
 requestAnimationFrame(loop);
 </script>
 </body>
