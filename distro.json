@@ -2,11 +2,26 @@
     {
         "distro": "PrimTux",
         "logo": "assets/distro/primtux.png",
-        "description": "Pour le primaire."
+        "description": "Pour le primaire. Un système informatique dédié à l’apprentissage et conçu par des pédagogues, pour l’école et la maison."
     },
     {
         "distro": "Linux NIRD",
         "logo": "assets/distro/nird.png",
         "description": "Pour le secondaire."
+    },
+    {
+        "distro": "Debian",
+        "logo": "assets/distro/nird.png",
+        "description": "J'aime Debian."
+    },
+    {
+        "distro": "Une autre distro",
+        "logo": "assets/distro/nird.png",
+        "description": "A trouver."
+    },
+    {
+        "distro": "Windows 11",
+        "logo": "assets/distro/nird.png",
+        "description": "Vous ne pouvez pas, votre ordinateur n'est pas assez récent"
     }
 ]
