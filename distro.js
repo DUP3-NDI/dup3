@@ -1,3 +1,4 @@
+var index = 0;
 fetch("distro.json")
     .then(response => response.json())
     .then(items => {
@@ -5,6 +6,8 @@ fetch("distro.json")
 
         items.forEach(item => {
             const card = document.createElement("div");
+            card.id = "card" + String(index)
+            index = index + 1
             card.className = "card";
 
             card.innerHTML = `

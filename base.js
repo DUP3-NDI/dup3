@@ -94,10 +94,7 @@ function ShowSomething(slot, button){
         tot=tot+1;
         if (tot === 3){
           dark()
-          var cards = document.getElementsByClassName("card")
-          for (let k=0; k<cards.length; k++){
-            setVisibility(cards[k], true);
-          }
+          setVisibility(document.getElementById("cards"), true);
           setVisibility(document.getElementById("pc-buttons"), false);
           light()
         }
