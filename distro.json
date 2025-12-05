@@ -1,0 +1,12 @@
+[
+    {
+        "distro": "PrimTux",
+        "logo": "assets/distro/primtux.png",
+        "description": "Pour le primaire."
+    },
+    {
+        "distro": "Linux NIRD",
+        "logo": "assets/distro/nird.png",
+        "description": "Pour le secondaire."
+    }
+]

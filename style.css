@@ -30,17 +30,7 @@ body{
     pointer-events: none;
     z-index: 9999;
 }
-.transparent-square {
-    width: 150px;
-    height: 150px;
-    visibility:hidden;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid black;
-    position: absolute;
-    top: 1%;
-    left: 1%;
 
-}
 .pc-btn.used {
     background-color: green;
     color: white;
@@ -70,11 +60,4 @@ body{
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
-}
-#line {
-    position: absolute;
-    background-color: black; /* couleur de la ligne */
-    height: 2px;            /* épaisseur */
-    transform-origin: 0 0;  /* pour rotation */
-    z-index: 1000;
 }
