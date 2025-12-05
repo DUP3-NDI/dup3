@@ -7,7 +7,7 @@
 }
 
 #cards{
-    visibility: visible;
+    visibility: hidden;
     position:absolute;
     z-index: 9999999999;
     left:35vh;
