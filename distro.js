@@ -14,6 +14,7 @@ fetch("distro.json")
                 <div class="card-title">${item.distro}</div>
                 <div class="card-icon"><img src="${item.logo}" alt="${item.distro} logo"></div>
                 <div class="card-desc">${item.description}</div>
+                <button class="OSButton">Installation de l'OS</button>
             `;
 
             container.appendChild(card);
