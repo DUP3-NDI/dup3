@@ -1,6 +1,8 @@
 var pc = document.getElementById("pc_image");
 var etat = 0
 var image = pc;
+pc.style.height = '200px';
+pc.style.width = '200px'
 var pb = document.getElementById("pb_image");
 var tot = 0;
 
@@ -53,8 +55,9 @@ function mouseup(e){
     setTimeout(function(){
       light();
       updateText();
-
       // recentrer PC
+      pc.style.height = '500px';
+      pc.style.width = '500px'
       pc.style.left = "50%";
       pc.style.top = "50%";
       pc.style.transform = "translate(-50%, -50%)";
