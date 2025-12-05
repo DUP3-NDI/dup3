@@ -296,6 +296,6 @@ function success(e){
   elem => {
   setVisibility(elem, false);
   });
-  console.log("TOUT MARCHE OUIIII")
+  setVisibility(document.getElementById("bornedarcade"), true); 
 }
 console.log("je marche très bien");
