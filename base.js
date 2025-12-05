@@ -57,7 +57,11 @@ function setVisibility(element, boolean){
 
 function updateText(){
   var titre = document.getElementById("titre");
+  if (etat != 3){
   titre.innerHTML = "Maintenant, il faut remplacer les composants qui étaient défaillants par des composants qui ont un faible coût pour l'environnemenent"
+  }else {
+    titre.innerHTML = "Votre PC est réparé !"
+  }
 }
 
 function mouseup(e){
@@ -296,6 +300,7 @@ function success(e){
   elem => {
   setVisibility(elem, false);
   });
-  setVisibility(document.getElementById("bornedarcade"), true); 
+  setVisibilitydocument.getElementById("bornedarcade"); 
+  etat = 3
 }
 console.log("je marche très bien");
