@@ -59,7 +59,19 @@ body{
     cursor: pointer;
 }
 
-.motherboard-image {
+.motherboard-image
+{
+    width: 100px;
+    cursor: pointer;
+}
+
+.ssd-image{
+    width: 100px;
+    cursor: pointer;
+}
+
+.ram-image
+{
     width: 100px;
     cursor: pointer;
 }
