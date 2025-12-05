@@ -60,7 +60,7 @@ function mouseup(e){
       pc.style.width = '500px'
       pc.style.left = "50%";
       pc.style.top = "50%";
-      pc.style.transform = "translate(-50%, -50%)";
+      pc.style.transform = "translate(-50%, -30%)";
       pb.style.visibility = "hidden";
 
       // afficher les boutons sur le PC
