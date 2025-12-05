@@ -29,6 +29,15 @@ function setNoText(){
   texte.innerHTML = "NON!!! Vous pouvez sûrement le reconditionner en modifiant certains composants."
 }
 
+function setVisibility(element, boolean){
+  if (boolean == true){
+    element.style.visibility = "visible";
+  } else{
+    element.style.visibility = "hidden"
+  }
+
+}
+
 function updateText(){
   var titre = document.getElementById("titre");
   titre.innerHTML = "Maintenant, il faut remplacer les composants qui étaient défaillants par des composants qui ont un faible coût pour l'environnemenent"
@@ -54,15 +63,15 @@ function mouseup(e){
       // afficher les boutons sur le PC
       pcButtonsContainer.style.display = "flex";
   pcButtons[0].addEventListener("click", (e) => {
-      showMotherboards(e.target.dataset.mb, e.target);
+      ShowSomething(e.target.dataset.mb, e.target);
   }, {once:true});
 
   pcButtons[1].addEventListener("click", (e) => {
-      ShowRam(e.target.dataset.mb, e.target);
+      ShowSomething(e.target.dataset.mb, e.target);
   }, {once:true}); 
 
   pcButtons[2].addEventListener("click", (e) => {
-      showSsd(e.target.dataset.mb, e.target);
+      ShowSomething(e.target.dataset.mb, e.target);
   }, {once:true}); 
   
     var texte = document.getElementById("No");
@@ -131,31 +140,17 @@ function ShowRam(slot, button){
         tot=tot+1;
         if (tot === 3){
           dark()
-        }
-        currentContainer.style.display = "none";
-        button.disabled = true;
-    }, {once:true});}
-
-function showSsd(slot, button){
-    const containers = {
-        "1": document.getElementById("imagesContainer"),
-        "2": document.getElementById("imagesContainer2"),
-        "3": document.getElementById("imagesContainer3")
-    };
-    Object.values(containers).forEach(c => c.style.display = "none");
-    const currentContainer = containers[slot];
-    currentContainer.style.display = "flex";
-
-    // Ajouter un listener au bouton pour le clic final
-    currentContainer.addEventListener("click", () => {
-        button.classList.add("used"); 
-        tot=tot+1;
-        if (tot === 3){
-          dark()
+          setVisibility(document.getElementById("cards"), true);
+          setVisibility(document.getElementById("pc-buttons"), false);
+          light()
         }
         currentContainer.style.display = "none";
         button.disabled = true;
     }, {once:true});
+  }
+
+function showMotherboards(slot, button){
+  ShowSomething(slot, button)
   }
 
 function dark() {
