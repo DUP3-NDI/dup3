@@ -22,7 +22,7 @@
     {
         "distro": "NixOs",
         "logo": "assets/distro/NixOs.png",
-        "description": "???"
+        "description": "NixOs est une distribution très fiable, la personnalisation et l'installation de paquets est très accessible. Aussi, votre configuration entière tiens sur un même fichier, ce qui est très pratique quand vous voulez partager un profil pour plusieurs machines."
     },
     {
         "distro": "Windows 11",
