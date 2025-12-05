@@ -58,6 +58,9 @@ function mouseup(e){
   pcButtons[2].addEventListener("click", (e) => {
       showSsd(e.target.dataset.mb, e.target);
   }, {once:true}); 
+  
+    var texte = document.getElementById("No");
+    texte.style.visibility = "hidden";
 
       // afficher tes transparents
     }, 2000);

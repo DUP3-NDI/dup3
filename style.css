@@ -71,3 +71,10 @@ body{
     gap: 40px;
     flex-wrap: wrap;
 }
+#line {
+    position: absolute;
+    background-color: black; /* couleur de la ligne */
+    height: 2px;            /* épaisseur */
+    transform-origin: 0 0;  /* pour rotation */
+    z-index: 1000;
+}
