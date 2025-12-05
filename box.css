@@ -16,7 +16,7 @@
 
 .card {
     padding: 2rem;
-    background-image: linear-gradient(to bottom left, #e0e4e5, #f2f6f9);
+    background-image: linear-gradient(to bottom left, #e0e4e5, #40c7b9);
     border-radius: 2rem;
     box-shadow:
       inset -2px 2px hsl(0 0 100% / 1),

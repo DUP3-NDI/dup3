@@ -3,6 +3,7 @@ var etat = 0
 var image = pc;
 pc.style.height = '200px';
 pc.style.width = '200px'
+
 var pb = document.getElementById("pb_image");
 var tot = 0;
 var etat1 =0;
@@ -84,7 +85,7 @@ function mouseup(e){
     texte.style.visibility = "hidden";
 
       // afficher tes transparents
-    }, 2000);
+    }, 3200);
   }
 }
 
