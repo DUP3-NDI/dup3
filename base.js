@@ -300,7 +300,7 @@ function success(e){
   elem => {
   setVisibility(elem, false);
   });
-  setVisibilitydocument.getElementById("bornedarcade"); 
+  setVisibilitydocument.getElementById("borneeee"); 
   etat = 3
 }
 console.log("je marche très bien");
