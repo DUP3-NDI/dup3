@@ -7,7 +7,7 @@
 }
 
 #cards{
-    visibility: hidden;
+    visibility: visible;
     position:absolute;
     z-index: 9999999999;
     left:35vh;
@@ -56,7 +56,7 @@
 .OSButton {
   text-align: center;
   justify-content: center;
+  align-self: center;
   width: 80px;
   height: 40px;
 }
-
