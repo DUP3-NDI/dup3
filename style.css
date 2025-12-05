@@ -16,8 +16,8 @@ body{
     position: absolute;
     visibility:visible;
 
-    left : 500px;
-    top : 500px;
+    left : 80%;
+    top : 60%;
 }
 
 #darken {
