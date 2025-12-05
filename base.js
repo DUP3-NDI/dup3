@@ -102,6 +102,7 @@ function showMotherboards(slot, button){
     // Ajouter un listener au bouton pour le clic final
       currentContainerlist[0].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
+                etat1 = 1;
         if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
@@ -110,10 +111,10 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
-        etat1 = 1;
     }, {once:true});
       currentContainerlist[1].addEventListener("click", () => {
         button.classList.add("usedtrue"); 
+                etat1 = 1;
         if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
@@ -122,11 +123,11 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
-        etat1 = 1;
+
             }, {once:true});
       currentContainerlist[2].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
-        tot=tot+1;
+                etat1 = 1;
         if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
@@ -135,7 +136,7 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
-        etat1 = 1;
+
     }, {once:true});
 
   }
@@ -154,6 +155,7 @@ function showMotherboards(slot, button){
     // Ajouter un listener au bouton pour le clic final
       currentContainerlist[0].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
+                etat2 = 1;
         if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
@@ -162,10 +164,10 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
-        etat2 = 1;
     }, {once:true});
       currentContainerlist[1].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
+                etat2 = 1;
         if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
@@ -174,10 +176,11 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
-        etat2 = 1;
+
             }, {once:true});
       currentContainerlist[2].addEventListener("click", () => {
         button.classList.add("usedtrue"); 
+                etat2 = 1;
         if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
@@ -186,7 +189,7 @@ function showMotherboards(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
-        etat2 = 1;
+
     }, {once:true});
 
   }
@@ -206,6 +209,7 @@ function showRam(slot, button){
     // Ajouter un listener au bouton pour le clic final
     currentContainerlist[0].addEventListener("click", () => {
         button.classList.add("usedfalse");
+                etat3 = 1;
         if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
@@ -214,10 +218,11 @@ function showRam(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
-        etat3 = 1;
+
     }, {once:true});
         currentContainerlist[1].addEventListener("click", () => {
         button.classList.add("usedtrue"); 
+                etat3 = 1;
         if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
@@ -226,10 +231,11 @@ function showRam(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
-        etat3 = 1;
+
     }, {once:true});
         currentContainerlist[2].addEventListener("click", () => {
         button.classList.add("usedfalse"); 
+                etat3 = 1;
         if (etat1 == 1 && etat2 == 1 && etat3 == 1){
           dark()
           setVisibility(document.getElementById("cards"), true);
@@ -238,7 +244,6 @@ function showRam(slot, button){
         }
         currentContainer.style.display = "none";
         button.disabled = true;
-        etat3 = 1;
     }, {once:true});
   }
 
