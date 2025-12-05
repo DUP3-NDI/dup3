@@ -25,7 +25,7 @@
     display: grid;
     grid-template-areas:
         "title icon"
-        "desc desc";
+        "desc butt";
     grid-template-columns: 1fr auto;
     gap: 1.2rem;
 
@@ -51,5 +51,10 @@
 .card-desc {
     grid-area: desc;
     font-size: 1rem;
+}
+
+.OSButton {
+  text-align: center;
+  justify-content: center;
 }
 
